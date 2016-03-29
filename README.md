@@ -1,1 +1,1 @@
-keeps track of foods and their calories.
+keeps track of foods and their caloric content.
