@@ -1,4 +1,5 @@
 import json
+
 foods = {}
 calories ={'popsicle':45, 'yogurt':120, 'muesli':200, 'beets':70, 'sweet potato':180, 'matcha latte': 230, 'mixed vegetables': 120, 'butter':40 }
 
