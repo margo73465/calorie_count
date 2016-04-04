@@ -16,7 +16,7 @@ def calorie_count():
     for food, count in foods.items():
         if food in calories:
             total += calories[food] * count 
-            print (total)
+    print (total)
     return foods
     
     daily_file = open('daily.json','w')
