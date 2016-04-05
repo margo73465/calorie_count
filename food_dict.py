@@ -19,10 +19,7 @@ def calorie_count():
     print (total)
     return foods
     
-    daily_file = open('daily.json','w')
-    json.dump(foods,daily_file, indent=4)
-    json.dump(total, daily_file, indent=4)
-    daily_file.close()
-calorie_count()
+   
+
 
 
