@@ -8,15 +8,15 @@ caloric_data ={'popsicle':45, 'yogurt':120, 'muesli':200, 'beets':70, 'sweet pot
 
 
 
-def calorie_count():						
+def calorie_count(cal_total=0):						
     
     food = ''
-    
+        
     food = input('Enter a food,  when finished enter q:')
             
         
     if food == 'q':
-        return user_intake
+        return user_intake, cal_total
 
     if food not in caloric_data:
         add_item = input('That item is not in our database, enter  the item name:')
@@ -33,7 +33,6 @@ def calorie_count():
 
     #print (calorie_total)   
     #print (" ,".join([food for food in user_intake]))
-    cal_total = 0    
     for food, count in user_intake.items():
         cal_total += caloric_data[food] * count 
 
@@ -48,14 +47,16 @@ def calorie_count():
 
     if food != 'q':
 
-        return  calorie_count()
+        return  calorie_count(cal_total=cal_total)
 
 
 
 
 
 
-calorie_count()
+print(calorie_count())
+
+
 
 
     #if __name__ == "__main__":
