@@ -16,7 +16,9 @@ def calorie_count(cal_total=0):
             
         
     if food == 'q':
-        return user_intake, cal_total
+        print (cal_total)
+        print (" ,".join([food for food in user_intake]))
+        return
 
     if food not in caloric_data:
         add_item = input('That item is not in our database, enter  the item name:')
@@ -54,7 +56,7 @@ def calorie_count(cal_total=0):
 
 
 
-print(calorie_count())
+calorie_count()
 
 
 
