@@ -31,8 +31,7 @@ def calorie_count(cal_total=0):
         user_intake[food] = count
  
 
-    #print (calorie_total)   
-    #print (" ,".join([food for food in user_intake]))
+
     for food, count in user_intake.items():
         cal_total += caloric_data[food] * count 
 
@@ -50,11 +49,11 @@ def calorie_count(cal_total=0):
         return  calorie_count(cal_total=cal_total)
 
 
+(user_intake, calorie_total) = calorie_count()
 
+print (calorie_total)   
+print (", ".join([food for food in user_intake]))
 
-
-
-print(calorie_count())
 
 
 
