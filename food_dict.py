@@ -3,22 +3,12 @@
 import json
 import requests
 
-API_key = '65f3c1d9a1d3c6f7edcf2802023fe069'
-API_id = '7f0a2c'
-payload_s = {'results':'0:3','fields':'brand_name','appId': '7f0a2caa', 'appKey': '65f3c1d9a1d3c6f7edcf2802023fe069'}
-payload_i = {'id':'513fceb575b8dbbc21001487','appId': '7f0a2caa', 'appKey': '65f3c1d9a1d3c6f7edcf2802023fe069'}
-r_search = requests.get('https://api.nutritionix.com/v1_1/search/{beets}', params=payload_s) 
-r_item = requests.get('https://api.nutritionix.com/v1_1/item', params=payload_i)
-r_search = r_search.json()
-r_item = r_item.json()
-print (json.dumps(r_search, indent=4, sort_keys=True))
-#print (json.dumps(r_item, indent=4, sort_keys=True))
-for item in 'hits':
-    if item in fields['brand_name'] == 'USDA':
-        print (item) 
+payload = {'format':'json','q':'butter','sort':'r','max':'3','offset':'0','api_key':'nASa7zKM8QMfmzIYG3e3G0lsyyLIP94H23IlHqAK'} 
 
 
-
+r = requests.get('http://api.nal.usda.gov/ndb/search/', params = payload)
+r  = r.json()
+print(json.dumps(r, indent=4, sort_keys=True))
 
 #food:servings dict
 count_dict = {}
