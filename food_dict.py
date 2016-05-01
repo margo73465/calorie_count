@@ -3,10 +3,13 @@
 import json
 import requests
 
-payload = ('format':'json','q':'butter':'sort':'n','max':'25','offset:'0','api_key':'nASa7zKM8QMfmzIYG3e3G0lsyyLIP94H23IlHqAK') 
+payload = {'format':'json','q':'butter','sort':'r','max':'3','offset':'0','api_key':'nASa7zKM8QMfmzIYG3e3G0lsyyLIP94H23IlHqAK'} 
 
 
-r = requests.get(http://api.nal.usda.gov/ndb/search/?
+r = requests.get('http://api.nal.usda.gov/ndb/search/', params = payload)
+r  = r.json()
+print(json.dumps(r, indent=4, sort_keys=True))
+
 #food:servings dict
 count_dict = {}
 #food:calorie dict
@@ -45,7 +48,7 @@ def calorie_count():
 
 def cal_amount():
     cal_total = 0
-    for food in user_intake:Sa7zKM8QMfmzIYG3e3G0lsyyLIP94H23IlHqAK
+    for food in user_intake:
         cal_total += user_intake[food] * count_dict[food]
     return cal_total
 
