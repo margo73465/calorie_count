@@ -10,8 +10,4 @@ r_search = requests.get('https://api.nutritionix.com/v1_1/search/{beets}', param
 r_search = r_search.json()
 print(json.dumps(r_search, indent=4, sort_keys=True))
 
-def hits():
-    for item in 'hits':
-        if item in 'fields'[1] == 'USDA':
-            print (item)
-hits() 
+ 
